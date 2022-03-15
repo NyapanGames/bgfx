@@ -1281,6 +1281,8 @@ VK_IMPORT
 					goto error;
 				}
 
+				g_internalData.instance = m_instance;
+
 				m_instanceApiVersion = vulkanApiVersionSelector;
 
 				BX_TRACE("Instance API version: %d.%d.%d"
@@ -1434,6 +1436,8 @@ VK_IMPORT_INSTANCE
 				}
 
 				m_physicalDevice = physicalDevices[physicalDeviceIdx];
+
+				g_internalData.physicalDevice = m_physicalDevice;
 
 				bx::memCopy(&s_extension[0], &physicalDeviceExtensions[physicalDeviceIdx][0], sizeof(s_extension) );
 

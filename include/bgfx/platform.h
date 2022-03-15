@@ -67,6 +67,8 @@ namespace bgfx
 	{
 		const struct Caps* caps; //!< Renderer capabilities.
 		void* context;           //!< GL context, or D3D device.
+		void* instance;			//VK instance
+		void* physicalDevice;
 	};
 
 	/// Get internal data for interop.
